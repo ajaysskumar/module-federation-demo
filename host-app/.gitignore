@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/dist
 /.pnp
 .pnp.js
 
@@ -11,6 +10,9 @@
 
 # production
 /build
+
+# Ignore dist folder
+dist/
 
 # misc
 .DS_Store
