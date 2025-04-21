@@ -1,8 +1,6 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
-const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -44,13 +42,5 @@ module.exports = {
     }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    new CopyWebpackPlugin({
-        patterns: [
-          { from: "public", to: "", filter: (resourcePath) => !resourcePath.endsWith("index.html") }, // Exclude index.html
-        ],
-      }),
-  ],
-  resolve: {
-    extensions: [".js", ".jsx"],
-  },
+  ]
 };

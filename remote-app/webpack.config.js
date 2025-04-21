@@ -1,7 +1,4 @@
-// filepath: /Users/ajaykumar/Projects/Personal/js-demos/micro-frontend/remote-app/webpack.config.js
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -44,7 +41,4 @@ module.exports = {
       },
     })
   ],
-  resolve: {
-    extensions: [".js", ".jsx"],
-  },
 };
