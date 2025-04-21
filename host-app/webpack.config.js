@@ -25,14 +25,6 @@ module.exports = {
               },
             },
           },
-          {
-            test: /\.css$/i, // Match .css files
-            use: ["style-loader", "css-loader"], // Use style-loader and css-loader
-          },
-          {
-            test: /\.svg$/i, // Match .svg files
-            type: "asset/resource", // Use Webpack's asset/resource for SVGs
-          },
     ],
   },
   plugins: [

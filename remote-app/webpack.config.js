@@ -8,15 +8,10 @@ module.exports = {
   mode: "development",
   devServer: {
     port: 3001,
-    static: {
-      directory: path.join(__dirname, "build"), // Serve static files from the 'build' directory
-    },
-    historyApiFallback: false, // Disable fallback to index.html for non-root paths
+    historyApiFallback: false,
   },
   output: {
-    path: path.resolve(__dirname, "build"), // Specify the output directory
     publicPath: "http://localhost:3001/",
-    clean: true, // Clean the output directory before each build
   },
   module: {
     rules: [
@@ -29,14 +24,6 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
-      },
-      {
-        test: /\.css$/i, // Match .css files
-        use: ["style-loader", "css-loader"], // Use style-loader and css-loader
-      },
-      {
-        test: /\.svg$/i, // Match .svg files
-        type: "asset/resource", // Use Webpack's asset/resource for SVGs
       },
     ],
   },
