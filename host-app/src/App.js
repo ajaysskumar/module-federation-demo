@@ -4,8 +4,7 @@ const RemoteHeader = lazy(() => import("remoteApp/Header"));
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <h4>This is host app. Remote will be loaded soon..</h4>
+    <Suspense fallback={<div>This is host app. Remote will be loaded soon..</div>}>
       <RemoteHeader />
     </Suspense>
   );

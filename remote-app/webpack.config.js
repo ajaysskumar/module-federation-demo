@@ -55,8 +55,7 @@ module.exports = {
           singleton: true
         },
       },
-    }),
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    })
   ],
   resolve: {
     extensions: [".js", ".jsx"],
