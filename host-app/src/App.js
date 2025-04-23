@@ -4,9 +4,12 @@ const RemoteFruitsTable = lazy(() => import("remoteApp/FruitsTable"));
 
 function App() {
   return (
-    <Suspense fallback={<div>This is host app. Remote will be loaded soon..</div>}>
-      <RemoteFruitsTable />
-    </Suspense>
+    <div>
+      <h1 style={{ textAlign: "center", color: "Orange" }}>Hello from Host component</h1>
+      <Suspense fallback={<div>This is host app. Remote will be loaded soon..</div>}>
+        <RemoteFruitsTable />
+      </Suspense>
+    </div>
   );
 }
 
