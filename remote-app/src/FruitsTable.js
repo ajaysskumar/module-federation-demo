@@ -1,11 +1,11 @@
 import React from "react";
-const vegetables = [
-    { name: "Carrot", quantity: 10, price: 0.5 },
-    { name: "Broccoli", quantity: 5, price: 1.2 },
-    { name: "Spinach", quantity: 8, price: 0.8 },
+const fruits = [
+    { name: "Apple", quantity: 5, price: 0.5 },
+    { name: "Banana", quantity: 6, price: 0.3 },
+    { name: "Orange", quantity: 4, price: 0.7 },
 ];
 
-const Header = () => (
+const FruitsTable = () => (
     <div>
         <h1 style={{ textAlign: "center", color: "green" }}>Hello from Remote App component</h1>
         <table style={{ width: "50%", margin: "0 auto", borderCollapse: "collapse" }}>
@@ -17,11 +17,11 @@ const Header = () => (
                 </tr>
             </thead>
             <tbody>
-                {vegetables.map((veg, index) => (
+                {fruits.map((fruit, index) => (
                     <tr key={index}>
-                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>{veg.name}</td>
-                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>{veg.quantity}</td>
-                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>${veg.price.toFixed(2)}</td>
+                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>{fruit.name}</td>
+                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>{fruit.quantity}</td>
+                        <td style={{ border: "1px solid black", padding: "8px", textAlign: "center" }}>${fruit.price.toFixed(2)}</td>
                     </tr>
                 ))}
             </tbody>
@@ -29,4 +29,4 @@ const Header = () => (
     </div>
 );
 
-export default Header;
+export default FruitsTable;

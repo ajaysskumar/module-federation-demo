@@ -29,7 +29,7 @@ module.exports = {
       name: "remoteApp",
       filename: "remoteEntry.js",
       exposes: {
-        "./Header": "./src/Header",
+        "./FruitsTable": "./src/FruitsTable",
       },
       shared: {
         react: {
